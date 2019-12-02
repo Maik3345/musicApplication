@@ -1,0 +1,50 @@
+.artistItemContainer {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+
+  & .artistItem {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      transition: all 0.5s;
+      transform: scale(1.2);
+    }
+
+    & .itemInformation {
+      color: #fff;
+      z-index: 2;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 50%;
+      left: 0;
+      background: rgba(0, 0, 0, 0.7);
+      opacity: 0.6;
+      z-index: 1;
+    }
+  }
+}
+
+.artistContainer {
+  background: #151515;
+  padding: 1rem;
+  padding-bottom: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+}

@@ -1,0 +1,14 @@
+.playMusicOptions {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconOptions {
+  font-size: 30px !important;
+}
+
+.disabledState{
+  opacity: 0.3;
+}
