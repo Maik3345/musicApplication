@@ -33,7 +33,7 @@ const PlayMusic = () => {
           <source src={song.preview_url} type="audio/mpeg" />
         </audio>
       ) : null,
-    [song]
+    [song, autoplay, random, numberOfTry]
   );
 
   const onEndMusic = () => {

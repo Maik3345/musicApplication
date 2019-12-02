@@ -1,4 +1,9 @@
-import { Container, Icon, IconButton, ListItemSecondaryAction } from "@material-ui/core";
+import {
+  Container,
+  Icon,
+  IconButton,
+  ListItemSecondaryAction
+} from "@material-ui/core";
 import Avatar from "@material-ui/core/Avatar";
 import Divider from "@material-ui/core/Divider";
 import List from "@material-ui/core/List";
@@ -81,7 +86,7 @@ const ListAlbum = () => {
   } = useAlbumList();
 
   const albums = _.toArray(albumList);
-  if (!albums.length || !albums) return null;
+  if (!albums.length) return null;
 
   return (
     <Container className={styles.albumsListContainer}>
@@ -90,7 +95,7 @@ const ListAlbum = () => {
         {albums.map(item => (
           <>
             <ListItem
-              selected={album.id === item.id}
+              selected={album ? album.id === item.id : false}
               button
               onClick={() => {
                 viewSongList();
